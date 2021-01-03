@@ -37,7 +37,7 @@ The `move_base` node subscribes to the `move_base_simple/goal` topic on startup 
 
 Upon receiving the message `move_base` node with the help of its navigation stack plans an autonomous path to get to that given goal pose.
 
-####Author - Jerome Justin - Robotics & Automation Software Engineer
+#### Author - Jerome Justin - Robotics & Automation Software Engineer
 
 
 
