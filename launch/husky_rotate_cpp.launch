@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!--- Run Move Base -->  
+  <include file="$(find husky_navigation)/launch/move_base.launch">
+    <arg name="no_static_map" value="true"/>
+  </include>
+  <node name="rotate_node" pkg="chironix_husky" type="rotate_node" output="screen">
+    <param name="targetgoal_csv" value="/home/jerome/catkin_ws/src/chironix_husky/assets/targetgoal.csv"/>  
+  </node> 
+</launch>
