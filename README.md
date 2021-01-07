@@ -30,7 +30,6 @@ To start the MoveBase node and the rotate_husky.py python node
 
  `roslaunch chironix_husky husky_rotate_cpp.launch`
 
-
 ##Methodology
 Both cpp and python nodes have been implemented with the same methodlogy. 
 The `move_base` node subscribes to the `move_base_simple/goal` topic on startup to recieve simple pose goals in the type of `geometery_msg/PoseStamped`. So the two nodes after startup first set up a publisher to the same above topic. Then locates the csv file with the 3D position and reads the file and creates a msg that matches the format of `geometery_msg/PoseStamped`. Once this is successful this message is published once.

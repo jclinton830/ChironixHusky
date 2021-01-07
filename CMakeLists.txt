@@ -20,7 +20,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 #catkin config
 catkin_package(
- INCLUDE_DIRS include
  LIBRARIES chironix_husky
  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime geometry_msgs move_base_msgs
  DEPENDS system_lib
@@ -40,3 +39,10 @@ target_link_libraries(rotate_node ${catkin_LIBRARIES})
 
 add_dependencies(rotate_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_executable(move_husky src/move_husky.cpp)
+
+set_target_properties(move_husky PROPERTIES COMPILE_FLAGS "-std=c++17")
+
+target_link_libraries(move_husky ${catkin_LIBRARIES})
+
+add_dependencies(move_husky ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
