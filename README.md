@@ -15,7 +15,7 @@
 
 To start the gazebo simulation for the husky robot 
 
- `roslaunch husky_gazebo husky_playpen.launch`
+ `roslaunch husky_gazebo husky_empty_world.launch`
 
 To start RViz 
 

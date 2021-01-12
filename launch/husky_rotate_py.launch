@@ -6,10 +6,6 @@
     <arg name="no_static_map" value="true"/>
   </include>
 
-  <!-- <node name="rotate_node" pkg="chironix_husky" type="rotate_node" output="screen">
-    <param name="targetgoal_csv" value="/home/jerome/catkin_ws/src/chironix_husky/assets/targetgoal.csv"/>  
-  </node>  -->
-
   <node name="rotate_husky" pkg="chironix_husky" type="rotate_husky.py" output="screen">
     <param name="targetgoal_csv" value="/home/jerome/catkin_ws/src/chironix_husky/assets/targetgoal.csv"/>  
   </node>  
